@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="Entities.CheckoutDetailsEntity" table="CHECKOUTDETAILS" schema="PUBLIC" catalog="PUBLIC">
+        <id name="id">
+            <column name="ID" sql-type="integer(32)"/>
+            <generator class="identity"/>
+        </id>
+        <property name="orderId">
+            <column name="ORDERID" sql-type="integer(32)" not-null="true"/>
+        </property>
+        <property name="productName">
+            <column name="PRODUCTNAME" sql-type="varchar(250)" length="250" not-null="true"/>
+        </property>
+        <property name="amount">
+            <column name="AMOUNT" sql-type="integer(32)"/>
+        </property>
+        <property name="price">
+            <column name="PRICE" sql-type="double(64)" precision="64"/>
+        </property>
+    </class>
+</hibernate-mapping>
